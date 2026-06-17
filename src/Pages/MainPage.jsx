@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { fetchblogs } from "../Hygraph-fetch"
 import { Link } from "react-router-dom"
+import Footer from "../Components/Footer/Footer"
 
 function MainPage() {
   const [blogs, setBlogs] = useState([])
@@ -31,6 +32,7 @@ function MainPage() {
           <Link to={`/artikel/${blog.id}`}>Læs mere</Link>
         </div>
       ))}
+      <Footer/>
     </div>
   )
 }
