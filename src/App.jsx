@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Forside from "./Pages/MainPage"
-import Artikel from "./Pages/articlePage"
+import Forside from "./Pages/MainPage/MainPage"
+import Artikel from "./Pages/ArticlePage/articlePage"
 
 function App() {
   return (

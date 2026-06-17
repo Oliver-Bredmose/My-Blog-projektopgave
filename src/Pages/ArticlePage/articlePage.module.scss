@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  height: 64px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.button{
+    border: none;
+    text-decoration: none;
+    background-color: var(--font-heading);
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-foreground);
+  margin: 0 auto;
+}
+
+.image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+.textcontent {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.meta{
+    max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 24px; 
+  color: var(--color-accent);
+}
