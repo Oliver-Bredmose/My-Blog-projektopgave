@@ -30,12 +30,21 @@
 .textcontent {
   max-width: 720px;
   margin: 0 auto;
+  margin-bottom: 0 auto;
   padding: 40px 24px;
+
 }
 
 .meta{
     max-width: 720px;
   margin: 0 auto;
+  margin-bottom: 0 auto;
   padding: 40px 24px; 
+  color: var(--color-accent);
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   color: var(--color-accent);
 }
