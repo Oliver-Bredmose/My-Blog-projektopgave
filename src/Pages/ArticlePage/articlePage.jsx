@@ -25,11 +25,11 @@ function Artikel() {
       {blog && (
         <div>
           <img className={styles.image} src={blog.image.url}/>
-          <p className={styles.meta}>{blog.category} · {new Date(blog.date).toLocaleDateString("da-DK")}</p>
+          <p className={styles.meta}>{blog.category} · <span className={styles.date}>{new Date(blog.date).toLocaleDateString("da-DK")}</span></p>
           <div className={styles.textcontent}>
             <h1>{blog.title}</h1>
             <p className={styles.author}>{blog.author}</p>
-            <p>{blog.content.text}</p>
+            <p className={styles.content}>{blog.content.text}</p>
           </div>
         </div>
       )}

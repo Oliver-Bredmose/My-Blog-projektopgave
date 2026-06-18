@@ -1,4 +1,4 @@
-.header {
+.header{
   display: flex;
   align-items: center;
   padding: 0 40px;
@@ -12,7 +12,7 @@
     background-color: var(--font-heading);
 }
 
-.logo {
+.logo{
   font-family: var(--font-heading);
   font-size: 22px;
   font-weight: 600;
@@ -20,26 +20,31 @@
   margin: 0 auto;
 }
 
-.image {
+.image{
   width: 100%;
   max-height: 500px;
   object-fit: cover;
   display: block;
 }
 
-.textcontent {
+.content{
+    padding-top: 20px;
+    color: var(--color-foreground);
+}
+
+.textcontent{
   max-width: 720px;
   margin: 0 auto;
   margin-bottom: 0 auto;
-  padding: 40px 24px;
-
+  padding: 15px 24px;
 }
 
 .meta{
     max-width: 720px;
   margin: 0 auto;
   margin-bottom: 0 auto;
-  padding: 40px 24px; 
+  padding: 45px 24px; 
+  padding-bottom: 0px;
   color: var(--color-accent);
   font-family: var(--font-ui);
   font-size: 12px;
@@ -47,4 +52,14 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-accent);
+  
+}
+
+.date{
+    color: var(--color-foreground);
+}
+
+.author{
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 40px;
 }
