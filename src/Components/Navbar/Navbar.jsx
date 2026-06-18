@@ -1,6 +1,9 @@
 import styles from "./Navbar.module.scss"
+import { useNavigate } from "react-router-dom"
 
 function Navbar({ categories, setActiveCategory, activeCategory }) {
+  const navigate = useNavigate()
+
   return (
     <nav className={styles.navbar}>
       <span className={styles.logo}>Kroniken</span>
@@ -15,6 +18,7 @@ function Navbar({ categories, setActiveCategory, activeCategory }) {
           </button>
         ))}
       </div>
+      <button className={styles.loginButton} onClick={() => navigate("/Login")}>Opret konto</button>
     </nav>
   )
 }
