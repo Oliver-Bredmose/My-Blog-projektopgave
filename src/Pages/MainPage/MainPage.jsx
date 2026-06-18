@@ -29,9 +29,9 @@ function MainPage() {
             <div key={blog.id} className={styles.featured}>
               <img src={blog.image.url}/>
               <div className={styles.featuredContent}>
-                <p className={styles.meta}>{blog.category} · {new Date(blog.date).toLocaleDateString("da-DK")}</p>
+                <p className={styles.meta}>{blog.category} · <span className={styles.date}>{new Date(blog.date).toLocaleDateString("da-DK")}</span></p>
                 <h1>{blog.title}</h1>
-                <p className={styles.excerpt}>{blog.content.text.slice(0, 200)}...</p>
+                <p className={styles.excerpt}>{blog.content.text.slice(0, 50)}...</p>
                 <p className={styles.author}>{blog.author} · <Link to={`/artikel/${blog.id}`}>Læs →</Link></p>
               </div>
             </div>
@@ -39,9 +39,9 @@ function MainPage() {
             // Resten af blogindlæggene vises som almindelige kort i et grid
             <div key={blog.id} className={styles.card}>
                 <img src={blog.image.url}/>
-                <p className={styles.meta}>{blog.category} · {new Date(blog.date).toLocaleDateString("da-DK")}</p>
+                <p className={styles.meta}>{blog.category} · <span className={styles.date}>{new Date(blog.date).toLocaleDateString("da-DK")}</span></p>
                 <h2>{blog.title}</h2>
-                <p className={styles.excerpt}>{blog.content.text.slice(0, 120)}...</p>
+                <p className={styles.excerpt}>{blog.content.text.slice(0, 75)}...</p>
                 <p className={styles.author}>{blog.author} · <Link to={`/artikel/${blog.id}`}>Læs →</Link></p>
             </div>
           )
