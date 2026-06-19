@@ -62,3 +62,53 @@
   background: var(--color-background);
   border-bottom: 1px solid var(--color-border);
 }
+
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--color-foreground);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 12px 16px;
+    gap: 0;
+    position: relative;
+  }
+
+  .burger {
+    display: block;
+    margin-left: auto;
+  }
+
+  .categories {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    padding-top: 16px;
+  }
+
+  .categories.open {
+    display: flex;
+  }
+
+  .loginButton {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .categories {
+    gap: 16px;
+  }
+
+  .categories button {
+    white-space: nowrap;
+  }
+}
