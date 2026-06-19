@@ -4,7 +4,7 @@ import { fetchBlogById } from "../../Hygraph-fetch"
 import Footer from "../../Components/Footer/Footer"
 import styles from "./articlePage.module.scss"
 
-function Artikel() {
+export function ArticlePage() {
   const [blog, setBlog] = useState(null)
   const { id } = useParams()
   const navigate = useNavigate()
@@ -37,5 +37,3 @@ function Artikel() {
     </div>
   )
 }
-
-export default Artikel

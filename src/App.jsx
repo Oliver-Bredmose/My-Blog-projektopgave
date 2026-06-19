@@ -1,15 +1,15 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Forside from "./Pages/MainPage/MainPage"
-import Artikel from "./Pages/ArticlePage/articlePage"
-import Login from "./Pages/Login/Login"
+import {MainPage} from "./Pages/MainPage/MainPage"
+import {ArticlePage} from "./Pages/ArticlePage/articlePage"
+import {LoginPage} from "./Pages/Login/Login"
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Forside />} />
-        <Route path="/artikel/:id" element={<Artikel />} />
-        <Route path="/Login" element={<Login />} />
+        <Route path="/" element={<MainPage />} />
+        <Route path="/artikel/:id" element={<ArticlePage />} />
+        <Route path="/Login" element={<LoginPage />} />
       </Routes>
     </BrowserRouter>
   )

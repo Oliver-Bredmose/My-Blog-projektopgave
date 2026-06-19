@@ -5,7 +5,7 @@ import Footer from "../../Components/Footer/Footer"
 import Navbar from "../../Components/Navbar/Navbar"
 import styles from "./MainPage.module.scss"
 
-function MainPage() {
+export function MainPage() {
   const [blogs, setBlogs] = useState([])
   const [activeCategory, setActiveCategory] = useState("Alle")
   const categories = ["Alle", ...new Set(blogs.map((blog) => blog.category))]
@@ -52,4 +52,3 @@ function MainPage() {
   )
 }
 
-export default MainPage
