@@ -29,7 +29,13 @@ export function ArticlePage() {
           <div className={styles.textcontent}>
             <h1>{blog.title}</h1>
             <p className={styles.author}>{blog.author}</p>
-            <p className={styles.content}>{blog.content.text}</p>
+            {/* content.text indeholder tegnene \n i stedet for rigtige linjeskift.
+                content.html er det samme indhold, men med rigtige <p>-afsnit fra
+                Hygraph. Indholdet kommer fra mit eget CMS, som kun jeg kan skrive i. */}
+            <div
+              className={styles.content}
+              dangerouslySetInnerHTML={{ __html: blog.content.html }}
+            />
           </div>
         </div>
       )}
