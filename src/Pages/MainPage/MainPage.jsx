@@ -31,7 +31,7 @@ export function MainPage() {
               <div className={styles.featuredContent}>
                 <p className={styles.meta}>{blog.category} · <span className={styles.date}>{new Date(blog.date).toLocaleDateString("da-DK")}</span></p>
                 <h1>{blog.title}</h1>
-                <p className={styles.excerpt}>{blog.content.text.slice(0, 50)}...</p>
+                <p className={styles.excerpt}>{blog.content.text.replace(/\\n/g, " ").slice(0, 50)}...</p>
                 <p className={styles.author}>{blog.author} · <Link to={`/artikel/${blog.id}`}>Læs →</Link></p>
               </div>
             </div>
@@ -41,7 +41,7 @@ export function MainPage() {
                 <img src={blog.image.url}/>
                 <p className={styles.meta}>{blog.category} · <span className={styles.date}>{new Date(blog.date).toLocaleDateString("da-DK")}</span></p>
                 <h2>{blog.title}</h2>
-                <p className={styles.excerpt}>{blog.content.text.slice(0, 75)}...</p>
+                <p className={styles.excerpt}>{blog.content.text.replace(/\\n/g, " ").slice(0, 75)}...</p>
                 <p className={styles.author}>{blog.author} · <Link to={`/artikel/${blog.id}`}>Læs →</Link></p>
             </div>
           )
